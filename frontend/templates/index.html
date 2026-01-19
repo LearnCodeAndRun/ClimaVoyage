@@ -1,0 +1,76 @@
+DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Aneesh Das">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>ClimaVoyage</title>
+    <link rel="icon" href="../static/assets/WEATHER FORECAST IMAGE.avif" type="image/avif">
+    <!--Setting the background image-->
+    <style>
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../static/assets/sky-background-video-conferencing_23-2148623068.avif");
+    background-repeat: no-repeat; 
+    background-size: cover;     
+    background-attachment: fixed; 
+}
+
+h1, p {
+    color: white; 
+    text-align: center;
+    padding-top: 100px;
+}
+.nav-links li a {
+    display: block;  
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+  }
+  </style> 
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ClimaVoyage</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Forecast
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Hourly</a></li>
+            <li><a class="dropdown-item" href="#">Daily</a></li>
+            <li><a class="dropdown-item" href="#">Weekly</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">News</a>
+        </li>
+      </ul>
+      <form class="d-flex position-relative" role="search" onsubmit="return false;">
+        <input class="form-control me-2" id="cityInput" type="text" placeholder="Enter City" aria-label="Search" autofocus="off">
+        <ul id="cityList" class="list-group position-absolute top-100 w-100"></ul>
+        <div id="weatherResult" class="mt-4"></div>
+        <button class="btn btn-outline-success" type="button">Check Weather</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<script src="../static/script.js"></script>
+</body>
+</html>
